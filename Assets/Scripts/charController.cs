@@ -31,7 +31,6 @@ public class charController: MonoBehaviour
         InvokeRepeating ("cheerfulnessMinusTime", 5, 10F);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         sliderKnowledge.value = knowledge;
@@ -72,17 +71,5 @@ public class charController: MonoBehaviour
             speed = 1;
         }
     }
-    public void ClickBottom(){ // Передвижение назад
-        rb.velocity = new Vector3(0, 0, -speed);
-        
-    }
-    public void ClickTop(){// Передвижение вперед
-        rb.velocity = new Vector3(0, 0, speed);
-    }
-    public void ClickRight(){// Передвижение вправо
-        rb.velocity = new Vector3(speed, 0, 0);
-    }
-    public void ClickLeft(){// Передвижение влево
-        rb.velocity = new Vector3(-speed, 0, 0);
-    }
+ 
 }
