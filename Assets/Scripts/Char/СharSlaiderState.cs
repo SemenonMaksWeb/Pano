@@ -10,9 +10,7 @@ public class СharSlaiderState : MonoBehaviour{
     {
 		slaider = GetComponent<Slider>();
 		SetValue();
-		if(Char != null){
-			Debug.Log(Char.stateChar.getHealth());
-		}
+ 
     }
 
     // Update is called once per frame
