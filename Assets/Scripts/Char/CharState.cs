@@ -6,10 +6,10 @@ public class CharState
 	private bool healthChar = true; // жив ли игрок
 	private const int maxState  = 100; // максимальное значения всех показателей
 	private const int maxSpeed  = 5; // максимальное значения всех показателей
-    private int health;// Здоровье игрока
-    private int psyche;// Психика игрока
-    private int cheerfulness = 100;// бодрость игрока
-    private int knowledge;// знания игрока  
+    private int health = 70;// Здоровье игрока
+    private int psyche = 50;// Психика игрока
+    private int cheerfulness = 80;// бодрость игрока
+    private int knowledge = 0;// знания игрока  
 	private int speed = maxSpeed; // Скорость героя
 
 	public bool getHealthChar(){ // Вернуть Жив ли герой
@@ -19,7 +19,7 @@ public class CharState
 	public int getPsyche(){ // Вернуть Психику игрока
 		return psyche;
 	}
-	public int getHealth(){ // Вернуть бодрость игрока
+	public int getHealth(){ // Вернуть Здоровье игрока
 		return health;
 	}
 	public int getCheerfulness(){ // Вернуть бодрость игрока

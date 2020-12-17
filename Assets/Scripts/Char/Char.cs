@@ -15,7 +15,7 @@ public class Char : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 		stateChar = new CharState();
 		charMovement = new charMovement(stateChar.getSpeed(), rb);
-		Debug.Log(this);   
+		//Debug.Log(this);   
     }
 
     // Update is called once per frame
@@ -35,5 +35,4 @@ public class Char : MonoBehaviour
 	public void ClickLeft(){
 		charMovement.ClickLeft();
 	}
-
 }
