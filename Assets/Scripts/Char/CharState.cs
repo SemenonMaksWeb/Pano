@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class CharState
 {
 	private bool healthChar = true; // жив ли игрок
 	private const int maxState  = 100; // максимальное значения всех показателей
 	private const int maxSpeed  = 5; // максимальное значения всех показателей
-    private int health = 70;// Здоровье игрока
-    private int psyche = 50;// Психика игрока
-    private int cheerfulness = 80;// бодрость игрока
+    private int health = 100;// Здоровье игрока
+    private int psyche = 100;// Психика игрока
+    private int cheerfulness = 100;// бодрость игрока
     private int knowledge = 0;// знания игрока  
 	private int speed = maxSpeed; // Скорость героя
 

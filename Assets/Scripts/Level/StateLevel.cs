@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
-public class StateLevel : MonoBehaviour
+public class StateLevel
 {
 	private bool CheckKybikZombi = false; // Попался ли игрок зомби?
 	private bool CheckZombiBoi = false; // Идет ли бой с зомби?
@@ -8,18 +10,11 @@ public class StateLevel : MonoBehaviour
 	private bool CheckTimeZombi = false; // Время ли ща побега от зомби?
 	private bool CheckExit = false; // Открыт ли выход?
 	private int TimeMinuteLoot; // Время лута минут
-	private int TimeSecondLoot; // Счетчик лута секунды
+	private int TimeSecondLoot = 0; // Счетчик лута секунды
 	private int TimeMinuteZombi; // Время зомби минут
-	private int TimeSecondZombi; // Счетчик зомби секунды
+	private int TimeSecondZombi = 0; // Счетчик зомби секунды
 	private string NameLevel; // Название уровня
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 	public int getTimeMinuteLoot(){ // Возвращает минуты лута
 		return TimeMinuteLoot;
 	}
@@ -50,10 +45,18 @@ public class StateLevel : MonoBehaviour
 	public bool getCheckKybikZombi(){// Возвращает Попался ли игрок зомби?  
 		return CheckKybikZombi;
 	}
-	public void setTimeLoot(int TimeMinute, int TimeSecond ,bool flagFalse , bool flagTrue){ // Функция таймер которая уменьшает время на 1 секунду
+	public void setTimeMinuteLoot(int time){ // Сохранить время лута на уровне
+		TimeMinuteLoot = time;
+	}
+	public void setTimeMinuteZombi(int time){// Сохранить время зомби на уровне
+		TimeMinuteZombi = time;
+	}
+	public void setTimeAll(int TimeMinute, int TimeSecond ,bool flagFalse , bool? flagTrue){ // Функция таймер которая уменьшает время на 1 секунду
 		if(TimeMinute == 0 && TimeSecond == 0){ // Время закончилось
-			flagFalse = false;
+		if(flagTrue != null){
 			flagTrue = true;
+		}
+			flagFalse = false;
 		}
 		else if(TimeSecond == 0){ // Если секунд нету
 			TimeSecond = 59;
@@ -71,7 +74,5 @@ public class StateLevel : MonoBehaviour
 	public void setCheckKybikZombi(bool name){ // сохранить флаг Попался ли игрок зомби?
 		CheckKybikZombi = name;
 	}
-
-
 }
   
