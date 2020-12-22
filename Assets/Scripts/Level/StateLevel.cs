@@ -51,18 +51,29 @@ public class StateLevel
 	public void setTimeMinuteZombi(int time){// Сохранить время зомби на уровне
 		TimeMinuteZombi = time;
 	}
-	public void setTimeAll(int TimeMinute, int TimeSecond ,bool flagFalse , bool? flagTrue){ // Функция таймер которая уменьшает время на 1 секунду
-		if(TimeMinute == 0 && TimeSecond == 0){ // Время закончилось
-		if(flagTrue != null){
-			flagTrue = true;
+
+	public void setTimeLoot(){
+		if(TimeMinuteLoot == 0 && TimeSecondLoot == 0){ // время закончилось
+			CheckTimeLoot = false;		 
+			CheckTimeZombi = true;
 		}
-			flagFalse = false;
+		else if(TimeSecondLoot == 0){// Если секунд нету
+			TimeSecondLoot = 59;
+			TimeMinuteLoot = TimeMinuteLoot -1;
+		}else if(TimeSecondLoot != 0){// Если секунды есть
+			TimeSecondLoot =  TimeSecondLoot -1;
 		}
-		else if(TimeSecond == 0){ // Если секунд нету
-			TimeSecond = 59;
-			TimeMinute = TimeMinute -1;
-		}else if(TimeSecond != 0){// Если секунды есть
-			TimeSecond =  TimeSecond -1;			
+	}
+		public void setTimeZombi(){
+		if(TimeMinuteZombi == 0 && TimeSecondZombi == 0){ // время закончилось
+			CheckTimeLoot = false;		 
+			CheckTimeZombi = true;
+		}
+		else if(TimeSecondZombi == 0){// Если секунд нету
+			TimeSecondZombi = 59;
+			TimeMinuteZombi = TimeMinuteZombi -1;
+		}else if(TimeSecondZombi != 0){// Если секунды есть
+			TimeSecondZombi =  TimeSecondZombi -1;
 		}
 	}
 	public void setNameLevel(string name){ // сохранить имя уровня

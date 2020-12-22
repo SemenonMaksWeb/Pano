@@ -9,7 +9,7 @@ public class TimeLoot: MonoBehaviour
     void Start()
     {
 	    text = GetComponent<Text>();
-		StartText();
+		TimerAll();
     }
 	private void StartText(){
 		string name = "";
@@ -30,13 +30,26 @@ public class TimeLoot: MonoBehaviour
 		}
 		text.text = name + " " +  minute + ":" + second;
 	}
-	 void Example() {
+	private void TimerAll() {
 		if(Level.LevelState.getCheckTimeLoot() ){// Время лута
-		CancelInvoke();
-		//Invoke(Level.LevelState.setTimeAll(
-		//Level.LevelState.getCheckTimeLoot(),
-		//Level.LevelState.getTimeSecondLoot(),
-		//);
+		InvokeRepeating ("LootTime", 1, 1);
+		}else if(Level.LevelState.getCheckTimeZombi()){// Время Зомби
+		InvokeRepeating ("ZombiTime", 1, 1);
+		}
+	 }
+	 void LootTime(){ // Время лута
+	 	Level.LevelState.setTimeLoot();
+		StartText();
+		if(!Level.LevelState.getCheckTimeLoot()){
+			CancelInvoke("LootTime");
+			InvokeRepeating ("ZombiTime", 1, 1);
+		}
+	 }
+	 void ZombiTime(){ // Время Зомби
+		Level.LevelState.setTimeZombi();
+		StartText();
+		if(!Level.LevelState.getCheckTimeLoot()){
+			CancelInvoke("ZombiTime");
 		}
 	 }
 }
