@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
-    "\\Assets\\Scripts\\Char"
+    "\\Assets\\Scripts",
+    "\\Assets\\Scripts\\Char",
+    "\\Assets\\Scripts\\menu"
   ],
-  "SelectedNode": "\\Assets\\Scripts",
+  "SelectedNode": "\\Assets\\Scripts\\Char\\СharSlaiderState.cs",
   "PreviewInSolutionExplorer": false
 }

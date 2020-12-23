@@ -15,7 +15,7 @@ public class Char : MonoBehaviour
     {
 		rb = GetComponent<Rigidbody>();
 		stateChar = new CharState();
-		charMovement = new charMovement(stateChar.getSpeed(), rb);
+		//charMovement = new charMovement(stateChar.getSpeed(), rb);
 		//Debug.Log(this);   
     }
 

@@ -66,8 +66,8 @@ public class StateLevel
 	}
 		public void setTimeZombi(){
 		if(TimeMinuteZombi == 0 && TimeSecondZombi == 0){ // время закончилось
-			CheckTimeLoot = false;		 
-			CheckTimeZombi = true;
+			CheckExit = true;		 
+			CheckTimeZombi = false;
 		}
 		else if(TimeSecondZombi == 0){// Если секунд нету
 			TimeSecondZombi = 59;

@@ -25,6 +25,10 @@ public class TimeLoot: MonoBehaviour
 			minute = Level.LevelState.getTimeMinuteZombi().ToString();
 			second = Level.LevelState.getTimeSecondZombi().ToString();
 		}
+		else if(Level.LevelState.getCheckExit()){
+			text.text = "Время искать выход!";
+			return;
+		}
 		if(second.Length != 2){ // фикс 1 цифры когда секунд меньше 1значного-символа
 			second = "0" + second;
 		}
@@ -33,7 +37,8 @@ public class TimeLoot: MonoBehaviour
 	private void TimerAll() {
 		if(Level.LevelState.getCheckTimeLoot() ){// Время лута
 		InvokeRepeating ("LootTime", 1, 1);
-		}else if(Level.LevelState.getCheckTimeZombi()){// Время Зомби
+		}
+		else if(Level.LevelState.getCheckTimeZombi()){// Время Зомби
 		InvokeRepeating ("ZombiTime", 1, 1);
 		}
 	 }
@@ -48,7 +53,7 @@ public class TimeLoot: MonoBehaviour
 	 void ZombiTime(){ // Время Зомби
 		Level.LevelState.setTimeZombi();
 		StartText();
-		if(!Level.LevelState.getCheckTimeLoot()){
+		if(!Level.LevelState.getCheckTimeZombi()){
 			CancelInvoke("ZombiTime");
 		}
 	 }
