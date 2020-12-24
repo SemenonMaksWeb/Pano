@@ -5,10 +5,10 @@ using UnityEngine;
 public class charMovement	 
 {
 	public int speed;
-	public Rigidbody rb;
-	public charMovement(int Valuespeed , Rigidbody Valuerb){
-		speed = Valuespeed;
-		rb = Valuerb;
+	public CharacterController CharacterController;
+	public charMovement(int ValueSpeed , CharacterController ValueCharacterController){
+		speed = ValueSpeed;
+		CharacterController = ValueCharacterController;
 	}  
     void Start()
     {
@@ -21,15 +21,19 @@ public class charMovement
         
     }
     public void ClickBottom(){ // Передвижение назад
-        rb.velocity = new Vector3(0, 0, -speed);    
+        Vector3 dir = new Vector3(0, 0 , -1 * speed);
+		CharacterController.Move(dir);
     }
 	public void ClickTop(){// Передвижение вперед
-		rb.velocity = new Vector3(0, 0, speed);
+		Vector3 dir = new Vector3(0, 0 , 1 * speed);
+		CharacterController.Move(dir);
 	}
 	public void ClickRight(){// Передвижение вправо
-		rb.velocity = new Vector3(speed, 0, 0);
+		Vector3 dir = new Vector3(1 * speed, 0 , 0);
+		CharacterController.Move(dir);
 	}
 	public void ClickLeft(){// Передвижение влево
-		rb.velocity = new Vector3(-speed, 0, 0);
+		Vector3 dir = new Vector3(-1 * speed, 0 , 0);
+		CharacterController.Move(dir);	 
 	}
 }

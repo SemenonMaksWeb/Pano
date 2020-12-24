@@ -6,16 +6,16 @@ public class Char : MonoBehaviour
 {
 	public CharState stateChar;
 	public charMovement charMovement;
-	private Rigidbody rb; // Твердое тело
+	private CharacterController CharacterController; // Твердое тело
     // Start is called before the first frame update
 	void Start(){
 
 	}
     void Awake()
     {
-		rb = GetComponent<Rigidbody>();
+		CharacterController = GetComponent<CharacterController>();
 		stateChar = new CharState();
-		//charMovement = new charMovement(stateChar.getSpeed(), rb);
+		charMovement = new charMovement(stateChar.getSpeed(), CharacterController);
 		//Debug.Log(this);   
     }
 

@@ -10,7 +10,7 @@ public class kybik : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+         
     }
 
     // Update is called once per frame
@@ -30,9 +30,9 @@ public class kybik : MonoBehaviour
 	public void RamdonZombi(int min , int max){
 		
 	}
-	public CheckMinMaxValue(){
-		int maxUser;
-		int maxZombi;
+	public void CheckMinMaxValue(){
+		int maxUser = 6;
+		int maxZombi = 6;
 		int psyche = Char.stateChar.getPsyche();
 		if(psyche > 80){
 			maxUser = 6;

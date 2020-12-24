@@ -3,9 +3,8 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Char",
-    "\\Assets\\Scripts\\menu"
+    "\\Assets\\Scripts\\Level"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Char\\СharSlaiderState.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Level\\StateLevel.cs",
   "PreviewInSolutionExplorer": false
 }

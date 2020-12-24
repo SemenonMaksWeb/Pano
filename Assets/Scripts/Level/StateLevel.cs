@@ -53,7 +53,7 @@ public class StateLevel
 	}
 
 	public void setTimeLoot(){
-		if(!getCheckKybikZombi() && getCheckKybikZombi() ){// если нету контакта с зомби
+		if(!getCheckKybikZombi() && !getCheckZombiBoi() && getCheckTimeLoot() ){// если нету контакта с зомби
 			if(TimeMinuteLoot == 0 && TimeSecondLoot == 0){ // время закончилось
 				CheckTimeLoot = false;		 
 				CheckTimeZombi = true;
@@ -67,7 +67,7 @@ public class StateLevel
 		}
 	}
 		public void setTimeZombi(){
-		if(!getCheckKybikZombi() && getCheckKybikZombi() ){ // если нету контакта с зомби
+		if(!getCheckKybikZombi() && !getCheckZombiBoi() && getCheckTimeZombi()){ // если нету контакта с зомби
 			if(TimeMinuteZombi == 0 && TimeSecondZombi == 0){ // время закончилось
 				CheckExit = true;		 
 				CheckTimeZombi = false;
