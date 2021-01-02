@@ -7,10 +7,14 @@ public class kybik : MonoBehaviour
 	public Char Char;
 	private int valueChar;
 	private int valueZombi;
+	private System.Random Random = new System.Random();
     // Start is called before the first frame update
     void Start()
     {
-         
+		Char.stateChar.setPsyche(-50);
+        CheckMinMaxValue();
+		Debug.Log(getvalueChar().ToString());
+		Debug.Log(getvalueZombi().ToString());
     }
 
     // Update is called once per frame
@@ -25,10 +29,10 @@ public class kybik : MonoBehaviour
 		return valueZombi;
 	}
 	public void RamdonUser(int min , int max ){
-		
+		 valueChar = Random.Next(min, max);
 	}
 	public void RamdonZombi(int min , int max){
-		
+		 valueZombi = Random.Next(min, max);
 	}
 	public void CheckMinMaxValue(){
 		int maxUser = 6;
@@ -43,15 +47,15 @@ public class kybik : MonoBehaviour
 			maxZombi = 5;
 		}
 		else if(psyche > 40){
-			maxUser = 3;
+			maxUser = 4;
 			maxZombi = 6;
 		}
 		else if(psyche > 20){
-			maxUser = 2;
+			maxUser = 3;
 			maxZombi = 6;
 		}
 	RamdonUser(1, maxUser);
-	RamdonUser(1, maxZombi);
+	RamdonZombi(1, maxZombi);
 	}
 
 }
