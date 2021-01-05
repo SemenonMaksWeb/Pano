@@ -9,14 +9,13 @@ public class СharSlaiderState : MonoBehaviour{
     void Start()
     {
 		slaider = GetComponent<Slider>();
-		SetValue();
  
     }
 
     // Update is called once per frame
     void Update()
     {
-		 
+		SetValue();
     }
 	private void SetValue(){
 		if(Char != null){

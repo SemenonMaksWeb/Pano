@@ -11,10 +11,12 @@ public class kybik : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		Char.stateChar.setPsyche(-50);
-        CheckMinMaxValue();
-		Debug.Log(getvalueChar().ToString());
-		Debug.Log(getvalueZombi().ToString());
+		//Char.stateChar.setPsyche(-50);
+        
+		//CheckMinMaxValue();
+		
+		//Debug.Log(getvalueChar().ToString());
+		//Debug.Log(getvalueZombi().ToString());
     }
 
     // Update is called once per frame

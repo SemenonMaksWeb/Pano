@@ -18,7 +18,7 @@ public class charMovement
     // Update is called once per frame
     void Update()
     {
-        
+       		Debug.Log(speed);
     }
     public void ClickBottom(){ // Передвижение назад
         Vector3 Move = new Vector3(0, 0 , -0.05f * speed);
