@@ -11,15 +11,24 @@ public class death : MonoBehaviour
     void Start()
     {
 		deathMenu = GetComponent<MonoBehaviour>(); 
+		if(Char.stateChar.getHealthChar()){
+			deathMenu.gameObject.SetActive(false);
+		}else{
+			deathMenu.gameObject.SetActive(true);
+		}
+		InvokeRepeating("checkChar", 1 , 1);
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {	
+		 
+    }
+	private void checkChar(){
 		if(Char != null){
-			if(!Char.stateChar.getHealthChar() ){
+			if(!Char.stateChar.getHealthChar()){
 				deathMenu.gameObject.SetActive(true);
 			}
 		}
-    }
+	}
 }

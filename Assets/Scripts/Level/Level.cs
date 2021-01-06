@@ -8,7 +8,7 @@ public class Level : MonoBehaviour
 	public int TimeZombiLevel; 	
 	public StateLevel LevelState;
     void Start(){
-
+		
     }
     void Update()
     {
