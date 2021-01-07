@@ -3,8 +3,8 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Loot"
+    "\\Assets\\Scripts\\Level"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Loot\\TriggerGetLoot.cs.meta",
+  "SelectedNode": "\\Assets\\Scripts\\Level\\StateLevel.cs",
   "PreviewInSolutionExplorer": false
 }

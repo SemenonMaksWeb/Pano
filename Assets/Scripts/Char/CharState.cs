@@ -7,9 +7,9 @@ public class CharState
 	private bool healthChar = true; // жив ли игрок
 	private const int maxState  = 100; // максимальное значения всех показателей
 	private const int maxSpeed  = 5; // максимальное значения всех показателей
-    private int health = 100;// Здоровье игрока
-    private int psyche = 100;// Психика игрока
-    private int cheerfulness = 100;// бодрость игрока
+    private int health = 80;// Здоровье игрока
+    private int psyche = 80;// Психика игрока
+    private int cheerfulness = 80;// бодрость игрока
     private int knowledge = 0;// знания игрока  
 	private int speed = maxSpeed; // Скорость героя
 
@@ -53,6 +53,7 @@ public class CharState
 		if(knowledge > maxState){ // У игрока больше 100% знания
 			knowledge = maxState;
 		}
+		Debug.Log(knowledge);
 	}
 
 	public void setCheerfulness(int Value){ // Сохранить бодрость игрока
