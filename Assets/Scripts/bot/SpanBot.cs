@@ -4,27 +4,28 @@ using UnityEngine;
 using System;
 
 
-public class spawn : MonoBehaviour
+public class SpanBot : MonoBehaviour
 {
+	private MonoBehaviour spawn;
+	public Level Level;
 	private List<int> indexSet = new List<int>();
 	private System.Random Random = new System.Random();
 	public GameObject [] Loot; // Префаб вашего Enemy
 	public int CountLoot; // Количество врагов, которое вы хотите заспавнить
 	public Vector3 [] RandomLoot; 
-	// public Vector3 [] RecordingLoot; 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-		for (int i = 0; i < CountLoot; i++) {
-			CheckRamdom();
-		}
-    }
 
     // Update is called once per frame
+	void Start(){
+		 spawn = GetComponent<MonoBehaviour>(); 
+	}
     void Update()
     {
-        
+        if(Level.LevelState.getCheckTimeZombi()){
+			for (int i = 0; i < CountLoot; i++) {
+				CheckRamdom();
+			}
+			spawn.gameObject.SetActive(false);
+		}
     }
 	private int RandomLootType(){ // какой лут будет
 		return Random.Next(0, Loot.Length);

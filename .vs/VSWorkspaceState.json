@@ -3,8 +3,9 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Char"
+    "\\Assets\\Scripts\\Char",
+    "\\Assets\\Scripts\\Level"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Char\\СharSlaiderState.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Char\\CametaChar.cs",
   "PreviewInSolutionExplorer": false
 }
