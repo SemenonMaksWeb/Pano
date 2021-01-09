@@ -6,7 +6,7 @@ public class CharState
 {
 	private bool healthChar = true; // жив ли игрок
 	private const int maxState  = 100; // максимальное значения всех показателей
-	private const int maxSpeed  = 5; // максимальное значения всех показателей
+	private const int maxSpeed  = 55; // максимальное значения всех показателей
     private int health = 80;// Здоровье игрока
     private int psyche = 80;// Психика игрока
     private int cheerfulness = 80;// бодрость игрока
@@ -67,14 +67,14 @@ public class CharState
 		if(cheerfulness > 80){
             speed = maxSpeed;
         }else if(cheerfulness > 60){
-            speed = 4;
+            speed = 50;
         }else if(cheerfulness > 40){
-            speed = 3;
+            speed = 50;
         }else if(cheerfulness > 20){
-            speed = 2;
+            speed = 50;
         }
         else if(cheerfulness >= 0){
-            speed = 1;
+            speed = 50;
         }
 	}
 }
